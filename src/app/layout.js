@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 
 const OutfitFont = Outfit({
@@ -19,9 +19,9 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${OutfitFont.className} h-full antialiased`}
     >
-      <body >
+      <body className="">
         <Navbar></Navbar>
-        {children}
+       <main className="max-w-7xl mx-auto"> {children}</main>
         <Footer></Footer>
         </body>
 
